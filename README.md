@@ -1,5 +1,7 @@
 # Likenook
 
+**[Install from WordPress.org](https://wordpress.org/plugins/likenook/)**
+
 Like and dislike buttons for WordPress posts, pages, WooCommerce products,
 custom post types and comments. Nine icon sets, six styles, a block that works
 inside Query Loop, a Most Liked Posts list, vote analytics, one-click import
@@ -201,6 +203,14 @@ and plugin `Version` match, builds with `bin/build-zip`, and deploys to SVN
 needs the repository secrets `SVN_USERNAME` (the exact WordPress.org login,
 `Sanju Shankar`) and `SVN_PASSWORD` (the SVN password from your WordPress.org
 profile).
+
+## Support
+
+Questions and bug reports: the [support forum](https://wordpress.org/support/plugin/likenook/) or a GitHub issue.
+
+Built and maintained by [Sanjay Shankar](https://sanjayshankar.me). If Likenook helps your site,
+a [review on WordPress.org](https://wordpress.org/support/plugin/likenook/reviews/#new-post)
+helps others find it, and you can [buy me a coffee](https://buymeacoffee.com/sanjayshankar).
 
 ## Credits
 

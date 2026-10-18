@@ -1,5 +1,6 @@
 === Likenook – Like Dislike Buttons ===
 Contributors: sanju-shankar
+Donate link: https://buymeacoffee.com/sanjayshankar
 Tags: like button, dislike, voting, reactions, feedback
 Requires at least: 6.3
 Tested up to: 7.1
@@ -17,6 +18,12 @@ Likenook adds like and dislike buttons (thumbs up and thumbs down) to posts, pag
 Use it as a simple like button, an upvote and downvote score, heart reactions, or a "Was this helpful?" question on documentation. It works with the block editor, Elementor, widgets, any page builder that supports shortcodes, and page caching.
 
 Everything is free, with no upsells.
+
+= How it works =
+
+1. **Install and activate.** Like and dislike buttons appear under your blog posts straight away, with counts.
+2. **Make them yours.** Pick a preset or choose icons, style, colours and placement, with a live preview of every change.
+3. **Learn from the votes.** The dashboard shows what readers like over time, your most and least liked content, and how this period compares with the last.
 
 = Use cases =
 
@@ -68,11 +75,24 @@ Everything is free, with no upsells.
 * A template tag for themes.
 * Hide the buttons on any single post from the editor.
 
-= Structured data =
+= Built for SEO and content strategy =
 
-* Like and dislike counts are added to your page's schema.org markup as `interactionStatistic` (LikeAction and DislikeAction).
-* They join your existing Article or WebPage entity rather than adding a competing one. This works with Yoast SEO, Rank Math, All in One SEO, and themes or plugins that print their own JSON-LD.
-* Counts are only marked up where visitors can see the results (counts, percentages or score), as search engines expect. No self-serving review stars are added.
+Likes are more than a vanity number. Likenook turns them into signals you and search engines can use.
+
+* **Structured data that fits your SEO plugin.** Like and dislike counts are added to your page's schema.org markup as `interactionStatistic` (LikeAction and DislikeAction). They join your existing Article or WebPage entity instead of adding a competing one, and work with Yoast SEO, Rank Math, All in One SEO, and themes or plugins that print their own JSON-LD.
+* **Guideline-friendly by design.** Counts are only marked up where visitors can see the results, as search engines expect. No star ratings are added, so you stay clear of Google's rules against self-serving review markup.
+* **Internal links to your best content.** The Most Liked Posts block, widget and shortcode link to the posts readers already love, in your sidebar, after articles or on a "popular" page. That keeps visitors reading and sends internal links where they count.
+* **Know what to update.** Most liked and most disliked posts by week, month or year show which articles earn their place and which need a refresh. On documentation, "Was this helpful?" votes point straight at the pages that leave readers stuck.
+* **Readable without JavaScript.** Buttons and their counts are part of the page HTML, so search engines and AI crawlers see them as they are, and the buttons never pop in after the page loads.
+* **Fast pages stay fast.** About 9 KB of JavaScript with no jQuery, loaded only on pages that show buttons, and full page caching keeps working.
+
+= Accessibility =
+
+* Real `<button>` elements that work with a keyboard, with a visible focus ring.
+* Each button reports whether it is pressed, and vote results are announced to screen readers.
+* Labels stay available to screen readers even when you hide them visually.
+* Animations switch off for visitors who prefer reduced motion.
+* Default colours follow your theme's text colour, so contrast holds on light and dark themes.
 
 = Analytics =
 
@@ -102,6 +122,12 @@ Import your existing votes from **WP ULike**, **Like Dislike for WP** and **Post
 * Action: `likenook_vote_recorded`. Filters: `likenook_buttons_html`, `likenook_can_vote`, `likenook_icon_sets`, `likenook_visitor_ip`, `likenook_rate_limit`, `likenook_schema_statistics`, `likenook_current_post_id`.
 * WP-CLI: `wp likenook stats`, `wp likenook recount`, `wp likenook import <source>`, `wp likenook reset`.
 * CSS custom properties such as `--likenook-like`, `--likenook-dislike` and `--likenook-radius`.
+
+= Support and feedback =
+
+Questions, bug reports and feature ideas are welcome in the [support forum](https://wordpress.org/support/plugin/likenook/). The code is on [GitHub](https://github.com/sanjuacodez/likenook) if you'd like to contribute.
+
+Likenook is built and maintained by [Sanjay Shankar](https://sanjayshankar.me). If it helps your site, a [review](https://wordpress.org/support/plugin/likenook/reviews/#new-post) helps other site owners find it, and you can [buy me a coffee](https://buymeacoffee.com/sanjayshankar) to support development.
 
 = Credits =
 
@@ -188,6 +214,22 @@ Your site is probably behind Cloudflare or a proxy. Under Voting, set "Visitor I
 = How do I move my votes from another like plugin? =
 
 Go to **Likenook → Tools** and click Import next to the plugin. You can run it again safely: it updates rather than doubles. On very large sites, use `wp likenook import wp-ulike`.
+
+= Is Likenook accessible? =
+
+Yes. The buttons are real buttons that work with a keyboard and screen readers, report their pressed state, announce vote results, and respect the reduced motion setting.
+
+= Can I style the buttons with my own CSS? =
+
+Yes. Everything uses CSS custom properties, so a few lines change the colours and shape everywhere, for example `.likenook { --likenook-like: #16a34a; --likenook-radius: 4px; }`. Each style, size and icon set also adds its own class to the wrapper.
+
+= Is Likenook translation-ready? =
+
+Yes. All text uses the `likenook` text domain and a translation template is included, so it can be translated on translate.wordpress.org or with a plugin like Loco Translate.
+
+= Where can I get help or suggest a feature? =
+
+Use the [support forum](https://wordpress.org/support/plugin/likenook/). Feature ideas are very welcome, and you can also open an issue on [GitHub](https://github.com/sanjuacodez/likenook).
 
 = What happens to my votes if I delete the plugin? =
 
