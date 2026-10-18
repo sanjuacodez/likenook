@@ -1,0 +1,78 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><style>html,body{margin:0;background:#fff}svg{display:block}</style></head><body>
+<svg id="A" viewBox="0 0 256 256" width="256" height="256" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2B1E6B"/><stop offset="1" stop-color="#140F3D"/></linearGradient>
+    <linearGradient id="pill" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#FF6B6B"/><stop offset="1" stop-color="#FF3D7F"/></linearGradient>
+    <clipPath id="tile"><rect width="256" height="256"/></clipPath>
+  </defs>
+  <g clip-path="url(#tile)">
+    <rect width="256" height="256" fill="url(#bg)"/>
+    <circle cx="128" cy="36" r="168" fill="#4C3A9E" opacity=".55"/>
+    <path d="M48 256 V112 A80 80 0 0 1 208 112 V256 Z" fill="#FFF8F1"/>
+    <path d="M62 256 V114 A66 66 0 0 1 194 114 V256 Z" fill="#FFE8DC"/>
+    <path id="glow" d="M78 256 V118 A50 50 0 0 1 178 118 V256 Z" fill="#FFD4C2"/>
+    <g id="like" transform="translate(128 132)">
+      <rect x="-50" y="-24" width="100" height="48" rx="24" fill="url(#pill)"/>
+      <rect x="-44" y="-21" width="88" height="18" rx="9" fill="#fff" opacity=".22"/>
+      <path d="M-14 8 L0 -8 L14 8" fill="none" stroke="#fff" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+    <g transform="translate(128 192)">
+      <rect x="-42" y="-20" width="84" height="40" rx="20" fill="#fff" stroke="#D9D3F5" stroke-width="3"/>
+      <path d="M-11 -5 L0 7 L11 -5" fill="none" stroke="#7C6FD6" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+    <circle id="ripple" cx="128" cy="132" r="0" fill="none" stroke="#fff" stroke-width="5" opacity="0"/>
+    <g id="sparks" fill="#FFD166"></g>
+    <g id="hearts"></g>
+  </g>
+</svg>
+<script>
+const C = { glow: '#FFD4C2', peak: '#FFB59A', heart: '#FF3D7F', heart2: '#FF8FB1' };
+const ease = {
+  out: t => 1 - Math.pow(1 - t, 3),
+  back: t => { const c1 = 1.9, c3 = c1 + 1; return 1 + c3*Math.pow(t-1,3) + c1*Math.pow(t-1,2); },
+};
+const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
+const seg = (t, a, b) => clamp((t - a) / (b - a), 0, 1);
+const hex = h => [1,3,5].map(i => parseInt(h.slice(i, i+2), 16));
+const mix = (a, b, k) => { const x = hex(a), y = hex(b); return 'rgb(' + x.map((v, i) => Math.round(v + (y[i] - v) * k)).join(',') + ')'; };
+const NS = 'http://www.w3.org/2000/svg';
+const like = document.getElementById('like'), rip = document.getElementById('ripple');
+const sparks = document.getElementById('sparks'), hearts = document.getElementById('hearts'), glow = document.getElementById('glow');
+for (let i = 0; i < 8; i++) { const c = document.createElementNS(NS, 'circle'); sparks.appendChild(c); }
+// One big heart rises out of the nook, two small ones trail beside it.
+const HEART = 'M0 13 C-20 0 -18 -16 -8 -16 C-3 -16 0 -12 0 -9 C0 -12 3 -16 8 -16 C18 -16 20 0 0 13 Z';
+const H = [
+  { dx: 0, top: 44, size: 1.35, delay: .22, fill: C.heart },
+  { dx: -46, top: 72, size: .62, delay: .34, fill: C.heart2 },
+  { dx: 46, top: 64, size: .52, delay: .42, fill: C.heart2 },
+];
+H.forEach(h => { const p = document.createElementNS(NS, 'path'); p.setAttribute('d', HEART); p.setAttribute('fill', h.fill); hearts.appendChild(p); });
+window.render = (id, t) => {
+  const press = seg(t, 0, .18), pop = seg(t, .18, .62);
+  const s = t < .18 ? 1 - .1 * ease.out(press) : .9 + .1 * ease.back(pop);
+  like.setAttribute('transform', `translate(128 132) scale(${s.toFixed(4)})`);
+  const r = seg(t, .18, .72);
+  rip.setAttribute('r', (26 + 46 * ease.out(r)).toFixed(2));
+  rip.setAttribute('opacity', (r > 0 && r < 1 ? (1 - r) * .85 : 0).toFixed(3));
+  const g = seg(t, .18, 1.1);
+  glow.setAttribute('fill', g > 0 && g < 1 ? mix(C.glow, C.peak, Math.sin(Math.PI * g)) : C.glow);
+  const sp = seg(t, .2, .78);
+  [...sparks.children].forEach((c, i) => {
+    const a = (i / 8) * Math.PI * 2 - Math.PI / 2, d = 40 + 34 * ease.out(sp);
+    c.setAttribute('cx', (128 + Math.cos(a) * d * 1.25).toFixed(2));
+    c.setAttribute('cy', (132 + Math.sin(a) * d * .8).toFixed(2));
+    c.setAttribute('r', (5.5 * (1 - sp)).toFixed(2));
+    c.setAttribute('opacity', sp > 0 && sp < 1 ? 1 : 0);
+  });
+  [...hearts.children].forEach((p, i) => {
+    const h = H[i], k = seg(t, h.delay, h.delay + .85);
+    const y = 124 - (124 - h.top) * ease.out(k);
+    const sc = h.size * (k < .35 ? ease.back(k / .35) : 1);
+    const o = k <= 0 || k >= 1 ? 0 : (k < .7 ? 1 : (1 - k) / .3);
+    p.setAttribute('transform', `translate(${128 + h.dx * ease.out(k)} ${y.toFixed(2)}) scale(${Math.max(0, sc).toFixed(3)})`);
+    p.setAttribute('opacity', o.toFixed(3));
+  });
+};
+window.render('A', 0);
+</script></body></html>
