@@ -3,7 +3,7 @@
  * Plugin Name:       Likenook – Like Dislike Buttons
  * Plugin URI:        https://github.com/sanjuacodez/likenook
  * Description:       Like and dislike buttons for posts, pages, products and comments, with icon sets, styles, a block, most-liked lists and vote analytics. Works with page caching.
- * Version:           3.0.0
+ * Version:           3.0.1
  * Requires at least: 6.3
  * Requires PHP:      7.4
  * Author:            Sanjay Shankar
@@ -18,7 +18,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-define( 'LIKENOOK_VERSION', '3.0.0' );
+define( 'LIKENOOK_VERSION', '3.0.1' );
 define( 'LIKENOOK_DB_VERSION', '1' );
 define( 'LIKENOOK_FILE', __FILE__ );
 define( 'LIKENOOK_PATH', plugin_dir_path( __FILE__ ) );

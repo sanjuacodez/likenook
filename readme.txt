@@ -5,7 +5,7 @@ Tags: like button, dislike, voting, reactions, feedback
 Requires at least: 6.3
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 3.0.0
+Stable tag: 3.0.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -262,6 +262,11 @@ They are kept, unless you switch on "Delete all votes and settings when the plug
 
 == Changelog ==
 
+= 3.0.1 =
+* New: optional newsletter sign-up from the plugin author on the Likenook dashboard and settings. Nothing is sent unless you click Subscribe, and closing the card hides it for 30 days.
+* New: optional one-question survey when you deactivate the plugin, to help improve it. Skip & deactivate sends nothing.
+* Docs: new External services section in the readme describing both.
+
 = 3.0.0 =
 * Rebuilt from scratch.
 * New: 9 icon sets, 6 button styles, sizes, layouts, colours, click animations and presets, with a live preview.
@@ -281,6 +286,9 @@ They are kept, unless you switch on "Delete all votes and settings when the plug
 * New: personal data export and erase, privacy policy text.
 
 == Upgrade Notice ==
+
+= 3.0.1 =
+Adds an optional author newsletter sign-up and an optional deactivation survey. No changes to your buttons, votes or settings.
 
 = 3.0.0 =
 A complete rebuild. Counts from version 2.x can be brought over under Likenook → Tools → Import.
