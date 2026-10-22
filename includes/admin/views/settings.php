@@ -475,4 +475,6 @@ unset( $likenook_types['attachment'] );
 			</aside>
 		</div>
 	</form>
+
+	<?php do_action( 'sanjayshankar_connect_box', 'likenook' ); ?>
 </div>

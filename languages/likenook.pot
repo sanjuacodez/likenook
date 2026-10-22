@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-10-16T16:30:53+00:00\n"
+"POT-Creation-Date: 2026-10-22T15:37:12+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: likenook\n"
@@ -122,8 +122,8 @@ msgstr ""
 #: includes/admin/class-likenook-admin.php:578
 #: includes/admin/views/chart.php:133
 #: includes/admin/views/dashboard.php:88
-#: includes/admin/views/dashboard.php:143
-#: includes/admin/views/dashboard.php:168
+#: includes/admin/views/dashboard.php:145
+#: includes/admin/views/dashboard.php:170
 #: includes/admin/views/welcome.php:212
 msgid "Likes"
 msgstr ""
@@ -133,8 +133,8 @@ msgstr ""
 #: includes/admin/class-likenook-admin.php:579
 #: includes/admin/views/chart.php:134
 #: includes/admin/views/dashboard.php:89
-#: includes/admin/views/dashboard.php:148
-#: includes/admin/views/dashboard.php:169
+#: includes/admin/views/dashboard.php:150
+#: includes/admin/views/dashboard.php:171
 #: includes/admin/views/welcome.php:212
 msgid "Dislikes"
 msgstr ""
@@ -304,7 +304,7 @@ msgid "Post"
 msgstr ""
 
 #: includes/admin/views/dashboard.php:90
-#: includes/admin/views/dashboard.php:158
+#: includes/admin/views/dashboard.php:160
 #: includes/admin/views/welcome.php:212
 msgid "Like ratio"
 msgstr ""
@@ -319,50 +319,50 @@ msgstr ""
 msgid "Deleted item #%d"
 msgstr ""
 
-#: includes/admin/views/dashboard.php:134
+#: includes/admin/views/dashboard.php:136
 #: includes/class-likenook-elementor-most-liked.php:110
 #: blocks/most-liked/index.js:65
 msgid "Period"
 msgstr ""
 
-#: includes/admin/views/dashboard.php:153
+#: includes/admin/views/dashboard.php:155
 #: includes/admin/views/welcome.php:212
 msgid "Total votes"
 msgstr ""
 
-#: includes/admin/views/dashboard.php:160
+#: includes/admin/views/dashboard.php:162
 msgid "pts"
 msgstr ""
 
-#: includes/admin/views/dashboard.php:166
+#: includes/admin/views/dashboard.php:168
 msgid "Votes per month"
 msgstr ""
 
-#: includes/admin/views/dashboard.php:166
+#: includes/admin/views/dashboard.php:168
 msgid "Votes per day"
 msgstr ""
 
-#: includes/admin/views/dashboard.php:174
+#: includes/admin/views/dashboard.php:176
 msgid "Imported totals without dates count in the figures above but not in the chart."
 msgstr ""
 
-#: includes/admin/views/dashboard.php:180
+#: includes/admin/views/dashboard.php:182
 #: includes/class-likenook-widgets.php:268
 #: includes/class-likenook-widgets.php:310
 msgid "Most liked"
 msgstr ""
 
-#: includes/admin/views/dashboard.php:181
+#: includes/admin/views/dashboard.php:183
 #: includes/admin/views/welcome.php:197
 #: includes/class-likenook-elementor-most-liked.php:84
 msgid "Most liked posts"
 msgstr ""
 
-#: includes/admin/views/dashboard.php:184
+#: includes/admin/views/dashboard.php:186
 msgid "Most disliked"
 msgstr ""
 
-#: includes/admin/views/dashboard.php:185
+#: includes/admin/views/dashboard.php:187
 msgid "Most disliked posts"
 msgstr ""
 
@@ -1471,6 +1471,232 @@ msgstr ""
 
 #: includes/class-likenook-widgets.php:331
 msgid "Period:"
+msgstr ""
+
+#: includes/connect/class-sanjayshankar-connect.php:209
+msgid "Subscribing…"
+msgstr ""
+
+#: includes/connect/class-sanjayshankar-connect.php:210
+#: includes/connect/class-sanjayshankar-connect.php:364
+msgid "Please enter a valid email address."
+msgstr ""
+
+#: includes/connect/class-sanjayshankar-connect.php:211
+msgid "Something went wrong. Please try again later."
+msgstr ""
+
+#. translators: 1: this plugin's name, 2: another plugin's name
+#: includes/connect/class-sanjayshankar-connect.php:249
+#, php-format
+msgid "%1$s and %2$s"
+msgstr ""
+
+#. translators: 1: this plugin's name, 2: number of the author's other plugins
+#: includes/connect/class-sanjayshankar-connect.php:252
+#, php-format
+msgid "%1$s and %2$d of my other plugins"
+msgid_plural "%1$s and %2$d of my other plugins"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/connect/class-sanjayshankar-connect.php:262
+msgid "Hide for 30 days"
+msgstr ""
+
+#: includes/connect/class-sanjayshankar-connect.php:271
+msgid "Hi, I’m Sanjay"
+msgstr ""
+
+#: includes/connect/class-sanjayshankar-connect.php:272
+msgid "Plugins by Sanjay Shankar"
+msgstr ""
+
+#: includes/connect/class-sanjayshankar-connect.php:275
+msgid "Be the first to try my new plugins"
+msgstr ""
+
+#: includes/connect/class-sanjayshankar-connect.php:275
+msgid "Stay in the loop"
+msgstr ""
+
+#. translators: %s: names of the author's plugins installed on this site
+#: includes/connect/class-sanjayshankar-connect.php:280
+#, php-format
+msgid "Thanks for using %s! I build free WordPress plugins, and subscribers hear about the new ones first."
+msgstr ""
+
+#: includes/connect/class-sanjayshankar-connect.php:282
+msgid "I build free WordPress plugins, and subscribers hear about the new ones first."
+msgstr ""
+
+#: includes/connect/class-sanjayshankar-connect.php:287
+msgid "Early access to new plugins"
+msgstr ""
+
+#: includes/connect/class-sanjayshankar-connect.php:288
+msgid "Beta invites"
+msgstr ""
+
+#: includes/connect/class-sanjayshankar-connect.php:289
+msgid "Release notes and tips"
+msgstr ""
+
+#: includes/connect/class-sanjayshankar-connect.php:290
+msgid "News from sanjayshankar.me"
+msgstr ""
+
+#. translators: %s: date
+#: includes/connect/class-sanjayshankar-connect.php:297
+#, php-format
+msgid "This site subscribed on %s. Thank you!"
+msgstr ""
+
+#: includes/connect/class-sanjayshankar-connect.php:303
+msgid "First name"
+msgstr ""
+
+#: includes/connect/class-sanjayshankar-connect.php:303
+msgid "(optional)"
+msgstr ""
+
+#: includes/connect/class-sanjayshankar-connect.php:307
+msgid "Email"
+msgstr ""
+
+#: includes/connect/class-sanjayshankar-connect.php:308
+msgid "you@example.com"
+msgstr ""
+
+#: includes/connect/class-sanjayshankar-connect.php:311
+msgid "Subscribe"
+msgstr ""
+
+#: includes/connect/class-sanjayshankar-connect.php:313
+msgid "Not now"
+msgstr ""
+
+#. translators: %s: privacy policy link
+#: includes/connect/class-sanjayshankar-connect.php:320
+#, php-format
+msgid "About one email a month, only about my plugins and sanjayshankar.me. Never sold or shared. Unsubscribe anytime. Sent via Brevo when you click Subscribe. %s"
+msgstr ""
+
+#: includes/connect/class-sanjayshankar-connect.php:321
+#: includes/connect/class-sanjayshankar-connect.php:535
+msgid "Privacy policy"
+msgstr ""
+
+#: includes/connect/class-sanjayshankar-connect.php:339
+msgid "You are not allowed to do this."
+msgstr ""
+
+#: includes/connect/class-sanjayshankar-connect.php:354
+msgid "Unknown request."
+msgstr ""
+
+#: includes/connect/class-sanjayshankar-connect.php:384
+msgid "Could not reach the newsletter service. Please try again later."
+msgstr ""
+
+#: includes/connect/class-sanjayshankar-connect.php:391
+msgid "Thanks! Check your inbox to confirm your subscription."
+msgstr ""
+
+#: includes/connect/class-sanjayshankar-connect.php:401
+msgid "I couldn’t get it to work"
+msgstr ""
+
+#: includes/connect/class-sanjayshankar-connect.php:401
+msgid "What went wrong?"
+msgstr ""
+
+#: includes/connect/class-sanjayshankar-connect.php:402
+msgid "I found a better plugin"
+msgstr ""
+
+#: includes/connect/class-sanjayshankar-connect.php:402
+msgid "Which plugin? What does it do better?"
+msgstr ""
+
+#: includes/connect/class-sanjayshankar-connect.php:403
+msgid "It’s missing a feature I need"
+msgstr ""
+
+#: includes/connect/class-sanjayshankar-connect.php:403
+msgid "Which feature would you like?"
+msgstr ""
+
+#: includes/connect/class-sanjayshankar-connect.php:404
+msgid "It broke my site or conflicts with something"
+msgstr ""
+
+#: includes/connect/class-sanjayshankar-connect.php:404
+msgid "What happened, and with which theme or plugin?"
+msgstr ""
+
+#: includes/connect/class-sanjayshankar-connect.php:405
+msgid "I only needed it for a short time"
+msgstr ""
+
+#: includes/connect/class-sanjayshankar-connect.php:405
+msgid "Anything you’d like to add? (optional)"
+msgstr ""
+
+#: includes/connect/class-sanjayshankar-connect.php:406
+msgid "Other"
+msgstr ""
+
+#: includes/connect/class-sanjayshankar-connect.php:406
+msgid "Please tell me more"
+msgstr ""
+
+#. translators: %s: plugin name
+#: includes/connect/class-sanjayshankar-connect.php:481
+#, php-format
+msgid "Quick question before you deactivate %s"
+msgstr ""
+
+#: includes/connect/class-sanjayshankar-connect.php:482
+msgid "Sending…"
+msgstr ""
+
+#: includes/connect/class-sanjayshankar-connect.php:504
+msgid "If you have a moment, tell me why. I read every answer and use it to make the plugin better."
+msgstr ""
+
+#: includes/connect/class-sanjayshankar-connect.php:508
+msgid "Reason for deactivating"
+msgstr ""
+
+#: includes/connect/class-sanjayshankar-connect.php:523
+msgid "You can contact me about this"
+msgstr ""
+
+#: includes/connect/class-sanjayshankar-connect.php:526
+msgid "Your name"
+msgstr ""
+
+#: includes/connect/class-sanjayshankar-connect.php:527
+msgid "Your email"
+msgstr ""
+
+#. translators: %s: privacy policy link
+#: includes/connect/class-sanjayshankar-connect.php:534
+#, php-format
+msgid "Sent to the plugin author only if you click Send: your answer, the plugin version and your WordPress, WooCommerce and PHP versions. Your name and email above are included while the box is ticked; untick it to send your answer anonymously. %s"
+msgstr ""
+
+#: includes/connect/class-sanjayshankar-connect.php:540
+msgid "Send & deactivate"
+msgstr ""
+
+#: includes/connect/class-sanjayshankar-connect.php:541
+msgid "Skip & deactivate"
+msgstr ""
+
+#: includes/connect/class-sanjayshankar-connect.php:542
+msgid "Cancel"
 msgstr ""
 
 #: blocks/buttons/index.js:59

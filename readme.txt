@@ -113,7 +113,7 @@ Import your existing votes from **WP ULike**, **Like Dislike for WP** and **Post
 * The visitor cookie holds a random ID and is set only after someone votes.
 * Works with the WordPress personal data export and erase tools.
 * Suggested privacy policy text is included.
-* No external requests, no tracking, no jQuery on the front end.
+* No external requests from your visitors' browsers, no tracking, no jQuery on the front end. The only outside requests are the optional, admin-only newsletter sign-up and deactivation survey described under External services.
 
 = For developers =
 
@@ -136,6 +136,23 @@ Icons are adapted from [Lucide](https://lucide.dev) (ISC licence).
 = Trademarks =
 
 WP ULike, Like Dislike for WP, Posts Like Dislike, Yoast SEO, Rank Math, All in One SEO, WooCommerce, Elementor, Divi, Bricks, Beaver Builder, WPBakery, Oxygen, Breakdance, SiteOrigin, Cloudflare and WP Rocket are trademarks of their respective owners. Likenook is an independent plugin and is not affiliated with or endorsed by any of them. These names are used only to describe compatibility and imports.
+
+== External services ==
+
+Likenook contacts two outside services, and only when an administrator chooses to.
+
+**Brevo (newsletter sign-up).** Administrators see a "Plugins by Sanjay Shankar" card on the Likenook dashboard, inviting them to join the author's newsletter about new plugins, betas and offers. The same sign-up form is always available at the bottom of **Likenook → Settings**. The administrator's first name and email are filled in from their profile, but nothing is sent unless they click **Subscribe**. Then the email address, the first name and the name of the plugin the sign-up came from ("Likenook") are sent from your server to Brevo, the newsletter service. The address is used only to send news about the author's plugins and sanjayshankar.me, is never sold or shared, and every email has an unsubscribe link. Closing the card hides it for 30 days, it stops once the site has subscribed, and it never appears to visitors.
+
+* Service: Brevo (Sendinblue SAS), [brevo.com](https://www.brevo.com/)
+* Brevo terms of use: [brevo.com/legal/termsofuse](https://www.brevo.com/legal/termsofuse/)
+* Brevo privacy policy: [brevo.com/legal/privacypolicy](https://www.brevo.com/legal/privacypolicy/)
+* Plugin author's privacy policy: [sanjayshankar.me/privacy](https://sanjayshankar.me/privacy/)
+
+**Google Apps Script and Google Sheets (deactivation feedback).** When an administrator clicks **Deactivate** for Likenook, a short optional survey asks why. Nothing is sent if they choose **Skip & deactivate** or **Cancel**. If they choose **Send & deactivate**, the selected reason, any comment, the plugin version, the WordPress, WooCommerce and PHP versions and the admin language are sent from your server to a Google Apps Script web app that stores them in the author's private Google Sheet. The administrator's name and email, shown in the survey, are included while "You can contact me about this" is ticked; unticking it sends the answer anonymously. The site address is never sent.
+
+* Service: Google Apps Script and Google Sheets, by Google LLC
+* Google terms of service: [policies.google.com/terms](https://policies.google.com/terms)
+* Google privacy policy: [policies.google.com/privacy](https://policies.google.com/privacy)
 
 == Installation ==
 

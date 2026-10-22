@@ -39,6 +39,7 @@ require_once LIKENOOK_PATH . 'includes/class-likenook-schema.php';
 require_once LIKENOOK_PATH . 'includes/class-likenook-widgets.php';
 require_once LIKENOOK_PATH . 'includes/class-likenook-elementor.php';
 require_once LIKENOOK_PATH . 'includes/functions.php';
+require_once LIKENOOK_PATH . 'includes/connect/connect.php';
 
 if ( is_admin() ) {
 	require_once LIKENOOK_PATH . 'includes/admin/class-likenook-admin.php';
@@ -51,6 +52,7 @@ if ( defined( 'WP_CLI' ) && WP_CLI ) {
 register_activation_hook( __FILE__, array( 'Likenook_DB', 'install' ) );
 
 add_action( 'plugins_loaded', 'likenook_boot' );
+add_filter( 'sanjayshankar_connect_plugins', 'likenook_connect_register' );
 
 /**
  * Wires every part of the plugin once WordPress and other plugins are loaded.
@@ -72,4 +74,19 @@ function likenook_boot() {
 	if ( defined( 'WP_CLI' ) && WP_CLI ) {
 		WP_CLI::add_command( 'likenook', 'Likenook_CLI' );
 	}
+}
+
+/**
+ * Lists Likenook in the shared "Plugins by Sanjay Shankar" newsletter card and deactivation survey.
+ *
+ * @param array $plugins Slug => details.
+ * @return array
+ */
+function likenook_connect_register( $plugins ) {
+	$plugins['likenook'] = array(
+		'name'    => 'Likenook',
+		'file'    => plugin_basename( LIKENOOK_FILE ),
+		'version' => LIKENOOK_VERSION,
+	);
+	return $plugins;
 }

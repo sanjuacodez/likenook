@@ -126,6 +126,8 @@ $likenook_table = function ( $rows, $caption ) {
 	<?php Likenook_Admin::header( 'likenook' ); ?>
 	<h1 class="screen-reader-text"><?php esc_html_e( 'Likenook Dashboard', 'likenook' ); ?></h1>
 
+	<?php do_action( 'sanjayshankar_connect_card', 'likenook' ); ?>
+
 	<?php if ( ! $likenook_all['likes'] && ! $likenook_all['dislikes'] ) : ?>
 		<?php require LIKENOOK_PATH . 'includes/admin/views/welcome.php'; ?>
 	<?php else : ?>
